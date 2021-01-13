@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade Brasileira</title>
+</head>
+<body>
+    <h1>Verificando se você é brasileiro ou não.</h1>
+    Em qual país você nasceu? <input type="text" name="país" id="país">
+    <input type="button" value="Consultar" onclick="consulta()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function consulta() {
+            var pNatal = (document.querySelector('input#país').value)
+            var res = document.querySelector('div#res')
+           
+            if (pNatal == 'Brasil') {
+                res.innerHTML = 'Você é Brasileiro.'
+            } else {
+                res.innerHTML = 'Você é estrangeiro.'
+            }
+        }
+    </script>    
+</body>
+</html>
